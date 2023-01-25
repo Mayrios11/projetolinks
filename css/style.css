@@ -1,0 +1,98 @@
+/* Folha de Estilo */
+
+/*
+seletor{
+    propriedade:valor;
+}
+*/
+:root {
+    --primary: #F24444;
+    --contrast: #F28888;
+    --contrast2: #F2AC88;
+    --gray-light: #F2DFE2;
+    --text: #666666;
+}
+
+body {
+    height: 100vh;/*VH->Unidade de medida relacionada á tela*/
+    margin: 0;
+    background-image: linear-gradient(var(--contrast2), var(--primary));
+    font-family: 'Roboto', sans-serif;
+    overflow:hidden /*Esconde a barra de rolagem*/
+}
+
+div {
+    width: 70%; /*largura Inicial*/
+    max-width: 340px; /*Largura máxima*/
+    height: auto;
+    background-color: var(--gray-light);
+    margin: 100px auto;/*Vertical(top/bottom) horizontal(right/Left)- Espaçamento externo*/
+    padding: 30px; /*Espaçamento interno*/
+    text-align: center;
+    border-radius: 10px;
+}
+
+img{
+    width: 100px;
+    border-radius: 50%;
+    border: solid 5px var(--contrast) /*(border-style ; border width ; border color)*/
+}
+
+h1 {
+    font-size: 32px;
+    color: #182626;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    color: var(--contrast);
+}
+
+p{
+    margin-top: 10px;
+    color: var(--text);
+}
+
+ul{
+    padding: 0;
+    margin-top: 40px;
+    margin-top: 30px;
+    list-style-type: none;
+}
+
+li{
+    margin-bottom: 5px;
+}
+
+#app{
+    display: none; /*Link escondido para aparecer somente no modo telefone*/
+}
+
+ul a{
+    background-color: var(--primary);
+    color: azure;
+    display: block;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 3px;
+}
+
+/*Ao passar o mousse*/
+ul a:hover{
+    background-color: var(--contrast2);
+}
+
+/*Media Query*/
+
+@media(max-width: 768px){
+
+    #app{
+        display: block;
+    }
+
+}
